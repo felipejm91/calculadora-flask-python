@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Flask-Python</title>
+</head>
+<body>
+    <form action="/" method="post">
+        <input type="number" id="numero1" name="numero1"><br><br>
+        <input type="number" id="numero2" name="numero2"><br><br>
+        <input type="submit" id="soma" name="soma" value="+">
+        <input type="submit" id="subtracao" name="subtracao" value="-">
+        <input type="submit" id="multiplicacao" name="multiplicacao" value="*">
+        <input type="submit" id="divisao" name="divisao" value="/">
+
+        <br><br><h2>Resultado: {{ resultado }}</h2>
+
+
+    </form>
+</body>
+</html>

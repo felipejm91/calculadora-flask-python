@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculadora Flask-Python</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <form action="/" method="post">
-        <input type="number" id="numero1" name="numero1"><br><br>
-        <input type="number" id="numero2" name="numero2"><br><br>
-        <input type="submit" id="soma" name="soma" value="+">
-        <input type="submit" id="subtracao" name="subtracao" value="-">
-        <input type="submit" id="multiplicacao" name="multiplicacao" value="*">
-        <input type="submit" id="divisao" name="divisao" value="/">
+    <div class="calculadora">
+        <form action="/" method="post">
+            <input type="number" id="numero1" name="numero1"><br><br>
+            <input type="number" id="numero2" name="numero2"><br><br>
+            <input class="botao" type="submit" id="multiplicacao" name="multiplicacao" value="*">
+            <input class="botao" type="submit" id="subtracao" name="subtracao" value="-">
+            <input class="botao" type="submit" id="soma" name="soma" value="+">
+            <input class="botao" type="submit" id="divisao" name="divisao" value="/">
 
-        <br><br><h2>Resultado: {{ resultado }}</h2>
-
-
-    </form>
+            <br><br><h2>Resultado: {{ resultado }}</h2>
+        </form>
+    </div>
 </body>
 </html>

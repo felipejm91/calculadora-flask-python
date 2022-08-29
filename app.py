@@ -6,6 +6,8 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def calc():
+    resultado = 0
+
     if request.method == 'POST':
         n1 = request.form.get('numero1')
         n2 = request.form.get('numero2')
@@ -18,6 +20,7 @@ def calc():
             resultado = calculadora.divisao(n1, n2)
         elif request.form.get('multiplicacao'):
             resultado = calculadora.multiplicacao(n1, n2)
+
     return render_template('calculadora.html', resultado=resultado)
 
 

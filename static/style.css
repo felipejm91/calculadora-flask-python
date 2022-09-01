@@ -1,31 +1,47 @@
 body {
-    align-items: center;
-    display: flex;
-    margin: 150px;
+    margin: 100px;
 }
 
-.calculadora {
-    border-width: 2px;
-    border-radius: 5px;
-    border-color: rgb(71, 70, 70);
-    background-color: rgba(181, 186, 190, 0.849);
-    border-style: solid;
-    height: 240px;
-    width: 240px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+div#calculadora {
+    background-image: linear-gradient(rgb(233 235 235),rgb(203 205 205), rgb(175, 171, 177), rgb(187, 187, 187), rgb(207, 205, 207));
+    height: 300px;
+    width: 300px;
+    padding: 5px;
+    margin: auto;
+    box-shadow: 1px 1px 20px #646464;
+    border-radius: 15px;
 }
 
-#zero {
-    width: 54px;
+input#numero {
+    border-radius: 15px;
+    border-style: none;
+    box-shadow: 2px 2px 2px #666464;
+    position: relative;
+    width: 250px;
+    padding: 5px;
+    margin: 20px
 }
 
 .botao {
-    height: 25px;
-    width: 25px;
+    position: relative;
+    height: 40px;
+    width: 40px;
     background-color:rgb(216, 216, 216);
     align-items: center;
-    border-width: 1px;
-    border-radius: 4px;
+    border-radius: 5px;
+    border-style: none;
+    box-shadow: 2px 2px 2px #666464;
+    margin: 5px;
+}
+
+.botao:hover {
+    background-color: aquamarine;
+}
+
+input#multiplicacao {
+    margin-left: 50px;
+}
+
+h2#resultado {
+    margin-left: 20px;
 }

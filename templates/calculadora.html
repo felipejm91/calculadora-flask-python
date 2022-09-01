@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculadora Flask-Python</title>
-    <!--<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">-->
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div id="calculadora">
@@ -16,7 +15,7 @@
             <input class="botao" type="submit" id="soma" name="soma" value="+">
             <input class="botao" type="submit" id="divisao" name="divisao" value="/">
 
-            <br><br><h2 id="resultado">Resultado: {{ resultado: }}</h2>
+            <br><br><p id="resultado">Resultado: {{ resultado }}</p>
         </form>
     </div>
 </body>

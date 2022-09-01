@@ -4,7 +4,7 @@ body {
 
 div#calculadora {
     background-image: linear-gradient(rgb(233 235 235),rgb(203 205 205), rgb(175, 171, 177), rgb(187, 187, 187), rgb(207, 205, 207));
-    height: 300px;
+    height: 310px;
     width: 300px;
     padding: 5px;
     margin: auto;
@@ -42,6 +42,10 @@ input#multiplicacao {
     margin-left: 50px;
 }
 
-h2#resultado {
-    margin-left: 20px;
+p#resultado {
+    margin-left: 60px;
+    margin-bottom: 20px;
+    text-decoration: solid;
+    font-size: 30px;
+    font-weight: bold;
 }

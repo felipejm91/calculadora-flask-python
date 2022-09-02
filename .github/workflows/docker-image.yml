@@ -27,8 +27,9 @@ jobs:
         images: felipejm91/calculadora-flask-python   
       
     # Realiza construção da imagem e Push para Docker Hub       
-    - uses: actions/checkout@v3
-    - name: Build the Docker image    
-      run: |
-        docker build . --file Dockerfile --tag felipejm91/calculadora-flask-python:latest && docker push felipejm91/calculadora-flask-python:latest
-        docker build . --file Dockerfile --tag ${{ steps.tag_cont.outputs.tags.outputs.tags }} && docker push ${{ steps.tag_cont.outputs.tags }}
+    - name: Build and push Docker image
+      uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+      with:
+        context: .
+        push: true
+        tags: ${{ steps.meta.outputs.tags }}

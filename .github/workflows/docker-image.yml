@@ -18,15 +18,9 @@ jobs:
         username: ${{ secrets.USER }}
         password: ${{ secrets.TOKEN }}
        
-    # Constrói e faz push do container para o Docker Hub
-    - name: Build and push Docker image
-      uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
-      with:
-        context: .
-        file: Dockerfile
-        push: true
-        # Define as tags de versionamento do container
-        tags: |
-          felipejm91/calculadora-flask-python:latest
-          felipejm91/calculadora-flask-python:${{ github.run_number }}
-        
+    # Realiza construção da imagem e Push para Docker Hub       
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: |
+        docker build . --file Dockerfile --tag felipejm91/calculadora-flask-python:latest && docker push felipejm91/calculadora-flask-python:latest
+        docker build . --file Dockerfile --tag felipejm91/calculadora-flask-python:${{ github.run_number }} && docker push felipejm91/calculadora-flask-python:${{ github.run_number }}

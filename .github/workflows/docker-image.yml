@@ -17,10 +17,18 @@ jobs:
       with:
         username: ${{ secrets.USER }}
         password: ${{ secrets.TOKEN }}
-       
+        
+    # Gera tag para imagem   
+    - name: Docker Metadata action
+      uses: docker/metadata-action@v4.0.1
+      id: tag_cont
+      with:
+        # List of Docker images to use as base name for tags
+        images: felipejm91/calculadora-flask-python   
+      
     # Realiza construção da imagem e Push para Docker Hub       
     - uses: actions/checkout@v3
-    - name: Build the Docker image
+    - name: Build the Docker image    
       run: |
         docker build . --file Dockerfile --tag felipejm91/calculadora-flask-python:latest && docker push felipejm91/calculadora-flask-python:latest
-        docker build . --file Dockerfile --tag felipejm91/calculadora-flask-python:${{ tags }} && docker push felipejm91/calculadora-flask-python:${{ tags }}
+        docker build . --file Dockerfile --tag ${{ steps.tag_cont }} && docker push ${{ steps.tag_cont }}

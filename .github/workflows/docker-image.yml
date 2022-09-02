@@ -28,4 +28,4 @@ jobs:
     # Realiza construção da imagem e Push para Docker Hub       
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag felipejm91/calculadora-flask-python:${{ steps.meta.outputs.tags }} && docker push      
+      run: docker build . --file Dockerfile --tag felipejm91/calculadora-flask-python && docker push      

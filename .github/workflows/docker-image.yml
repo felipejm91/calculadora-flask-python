@@ -26,7 +26,8 @@ jobs:
         # Apontamento para arquivo do Dockerfile
         file: ./Dockerfile
         push: true
-        tags: 
+        # Define as tags de versionamento do container
+        tags: |
           felipejm91/calculadora-flask-python:latest
           felipejm91/calculadora-flask-python:${{ github.run_number }}
         

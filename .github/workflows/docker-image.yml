@@ -23,4 +23,4 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build . --file Dockerfile --tag felipejm91/calculadora-flask-python:latest && docker push felipejm91/calculadora-flask-python:latest
-        docker build . --file Dockerfile --tag felipejm91/calculadora-flask-python:${{ github.run_number }} && docker push felipejm91/calculadora-flask-python:${{ github.run_number }}
+        docker build . --file Dockerfile --tag felipejm91/calculadora-flask-python:${{ tags.v* }} && docker push felipejm91/calculadora-flask-python:${{ tags.v* }}

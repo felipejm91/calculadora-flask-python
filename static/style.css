@@ -19,7 +19,7 @@ input#numero {
     position: relative;
     width: 250px;
     padding: 5px;
-    margin: 20px
+    margin: 20px;
 }
 
 .botao {
@@ -32,10 +32,12 @@ input#numero {
     border-style: none;
     box-shadow: 2px 2px 2px #666464;
     margin: 5px;
+    font-size: 20px;
+    padding: 10px;
 }
 
 .botao:hover {
-    background-color: aquamarine;
+    background-color: rgb(165, 165, 165);
 }
 
 input#multiplicacao {

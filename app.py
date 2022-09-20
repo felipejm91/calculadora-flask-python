@@ -12,13 +12,13 @@ def calc():
         n1 = request.form.get('numero1')
         n2 = request.form.get('numero2')
 
-        if request.form.get('soma'):
+        if request.form.get('nSoma'):
             resultado = calculadora.soma(n1, n2)
-        elif request.form.get('subtracao'):
+        elif request.form.get('nSubtracao'):
             resultado = calculadora.subtracao(n1, n2)
-        elif request.form.get('divisao'):
+        elif request.form.get('nDivisao'):
             resultado = calculadora.divisao(n1, n2)
-        elif request.form.get('multiplicacao'):
+        elif request.form.get('nMultiplicacao'):
             resultado = calculadora.multiplicacao(n1, n2)
 
     return render_template('calculadora.html', resultado=resultado)

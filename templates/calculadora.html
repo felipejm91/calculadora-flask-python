@@ -8,15 +8,18 @@
 <body>
     <div id="calculadora">
         <form action="/" method="post" id="formulario">
-            <input type="number" id="numero" name="numero1"><br><br>
-            <input type="number" id="numero" name="numero2"><br><br>
-            <input class="botao" type="submit" id="multiplicacao" name="multiplicacao" value="*">
-            <input class="botao" type="submit" id="subtracao" name="subtracao" value="-">
-            <input class="botao" type="submit" id="soma" name="soma" value="+">
-            <input class="botao" type="submit" id="divisao" name="divisao" value="/">
+            <input type="number" class="numero"  id="idNumero1" name="numero1" placeholder="Primeiro número"><br><br>
+            <input type="number" class="numero" id="idNumero2" name="numero2" placeholder="Segundo número"><br><br>
+            <input class="botao" type="submit" id="idMultiplicacao" name="nMultiplicacao" value="*">
+            <input class="botao" type="submit" id="idSubtracao" name="nSubtracao" value="-">
+            <input class="botao" type="submit" id="idSoma" name="nSoma" value="+">
+            <input class="botao" type="submit" id="idDivisao" name="nDivisao" value="/">
 
             <br><br><p id="resultado">Resultado: {{ resultado }}</p>
         </form>
     </div>
+    <footer>
+        <p>Copyright&copy; Felipe José Meneguetti - 2022</p>
+    </footer>
 </body>
 </html>

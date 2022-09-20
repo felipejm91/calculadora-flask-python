@@ -1,9 +1,15 @@
+@charset "UTF-8";
+
 body {
-    margin: 100px;
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+    padding: 50px;
+    background-color: #e8e8ef;
 }
 
 div#calculadora {
-    background-image: linear-gradient(rgb(233 235 235),rgb(203 205 205), rgb(175, 171, 177), rgb(187, 187, 187), rgb(207, 205, 207));
+    background-image: linear-gradient(rgb(190, 190, 190),rgb(190, 190, 190), rgb(190, 190, 190), rgb(190, 190, 190), rgb(115, 115, 115));
     height: 310px;
     width: 300px;
     padding: 5px;
@@ -12,7 +18,7 @@ div#calculadora {
     border-radius: 15px;
 }
 
-input#numero {
+input.numero {
     border-radius: 15px;
     border-style: none;
     box-shadow: 2px 2px 2px #666464;
@@ -22,11 +28,15 @@ input#numero {
     margin: 20px;
 }
 
-.botao {
+input#numero:hover {
+    background: rgb(219, 216, 211);
+}
+
+input.botao {
     position: relative;
     height: 40px;
     width: 40px;
-    background-color:rgb(216, 216, 216);
+    background-color:rgba(0, 0, 0, .8);
     align-items: center;
     border-radius: 5px;
     border-style: none;
@@ -34,10 +44,15 @@ input#numero {
     margin: 5px;
     font-size: 20px;
     padding: 10px;
+    color: white;
 }
 
-.botao:hover {
-    background-color: rgb(165, 165, 165);
+input.botao:hover {
+    background-color: rgb(71, 70, 70);
+}
+
+input#idMultiplicacao {
+    margin-left: 50px;
 }
 
 input#multiplicacao {
@@ -45,9 +60,24 @@ input#multiplicacao {
 }
 
 p#resultado {
-    margin-left: 60px;
-    margin-bottom: 20px;
+    margin-left: 25px;
+    padding-top: 25px;
     text-decoration: solid;
-    font-size: 30px;
+    font-size: 15pt;
+    font-weight: bold;
+    color: white;
+}
+
+footer {
+    display: block;
+    margin-top: 90px;
+    margin-left: 325px;
+    padding: 50px;
+    align-content: center;
+}
+
+footer p{
+    font-family: Arial, sans-serif;
+    font-size: 9pt;
     font-weight: bold;
 }

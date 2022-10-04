@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: calculadora
-  namespace: ns-calculadora
+  namespace: calculadora
 spec:
   selector:
     matchLabels:

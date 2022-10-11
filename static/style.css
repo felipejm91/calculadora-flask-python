@@ -71,13 +71,26 @@ p#resultado {
 footer {
     display: block;
     margin-top: 90px;
-    margin-left: 325px;
+    margin-left: 180px;
     padding: 50px;
     align-content: center;
 }
 
 footer p{
     font-family: Arial, sans-serif;
-    font-size: 9pt;
+    font-size: 10pt;
     font-weight: bold;
+}
+
+footer p#copy{
+    margin-left: 125px;
+}
+
+footer a{
+    font-weight: bolder;
+    color: black;
+}
+
+footer a:hover{
+    color: #666464;
 }

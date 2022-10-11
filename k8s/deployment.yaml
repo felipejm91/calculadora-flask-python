@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: calculadora
-  namespace: calculadora
 spec:
   selector:
     matchLabels:
@@ -17,7 +16,7 @@ spec:
         image: felipejm91/calculadora-flask-python
         resources:
           limits:
-            memory: "128Mi"
-            cpu: "500m"
+            memory: "64Mi"
+            cpu: "250m"
         ports:
         - containerPort: 5000

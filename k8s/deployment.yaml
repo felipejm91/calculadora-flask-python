@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: calculadora
-        image: felipejm91/calculadora-flask-python
+        image: felipejm91/calculadora-flask-python:latest
         resources:
           limits:
             memory: "64Mi"

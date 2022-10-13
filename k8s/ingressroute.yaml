@@ -6,7 +6,7 @@ spec:
   entryPoints:
     - web
   routes:
-  - match: Host(`calc.ucommerce.com.br`)
+  - match: Host(`calc.felipemeneguetti.com.br`)
     kind: Rule
     services:
     - kind: Service

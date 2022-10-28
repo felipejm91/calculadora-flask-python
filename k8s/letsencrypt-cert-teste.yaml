@@ -1,0 +1,15 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: letsencrypt-dev
+  namespace: calculadora
+spec: 
+  acme:
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    email: flmeneguetti@yahoo.com.br
+    privateKeySecretRef:
+      name: letsencrypt-dev
+    solvers:
+    - http01:
+        ingress:
+          class: nginx

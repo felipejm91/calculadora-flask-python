@@ -5,8 +5,11 @@
   Calculadora para operações aritméticas básicas; desenvolvida com HTML, CSS, Flask, Python E Docker. Esse projeto tem como finalidade, implantar todos os conhecimentos básicos adquiridos durante os estudos das ferramentas citadas. 
 
   Repositório do Github já conta com uma pipeline de automatização de CI, para que seja feito o upload automático de uma nova versão da aplicação para o repositório do Docker Hub.
+  
+  Aplicação foi configurada em um cluster kubernetes no ambiente do Google Cloud(GKE) e configurado o acesso através dop domínio "calc.felipemeneguetti.com.br" e implantado segurança de SSL/TLS. 
+  
+  Próximo objetivo é implantar a automação do deploy para o cluster através de um pipeline CD.
 
-  Aplicação está configurada em um cluster kubernetes no ambiente do Google Cloud(GKE). Próximo passo será implantar a deploy automático da aplicação para o cluster.
 ----------------------------------
 
 

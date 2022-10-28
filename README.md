@@ -6,6 +6,7 @@
 
   Repositório do Github já conta com uma pipeline de automatização de CI, para que seja feito o upload automático de uma nova versão da aplicação para o repositório do Docker Hub.
 
+  Aplicação está configurada em um cluster kubernetes no ambiente do Google Cloud(GKE). Próximo passo será implantar a deploy automático da aplicação para o cluster.
 ----------------------------------
 
 

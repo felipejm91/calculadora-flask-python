@@ -2,7 +2,7 @@
 
 **EM DESENVOLVIMENTO** - **SUGESTÕES E DICAS SÃO BEM-VINDAS**
 
-  Calculadora para operações aritméticas básicas; desenvolvida com HTML, CSS, Flask, Python E Docker. Esse projeto tem como finalidade, implantar todos os conhecimentos básicos adquiridos durante os estudos das ferramentas citadas. Próximo passo será a implantação da aplicação em um cluster Kubernetes.
+  Calculadora para operações aritméticas básicas; desenvolvida com HTML, CSS, Flask, Python E Docker. Esse projeto tem como finalidade, implantar todos os conhecimentos básicos adquiridos durante os estudos das ferramentas citadas. 
 
   Repositório do Github já conta com uma pipeline de automatização de CI, para que seja feito o upload automático de uma nova versão da aplicação para o repositório do Docker Hub.
 

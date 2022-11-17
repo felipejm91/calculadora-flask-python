@@ -5,7 +5,8 @@ body {
     height: 500px;
     margin: auto;
     padding: 50px;
-    background-color: #e8e8ef;
+    /*background-color: #e8e8ef;*/
+    background-color: rgb(52, 68, 63);
 }
 
 div#calculadora {

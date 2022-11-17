@@ -4,6 +4,10 @@ on:
   push:
     branches: [ "main" ]
 
+env:
+  REPOSITORIO: felipejm91
+  IMAGEM_NOME: calculadora-flask-python
+
 jobs:
 
   build:
@@ -16,7 +20,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v4
       with:
-        images: name/app
+        images: ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}
         tags: |
           type=schedule
           type=ref,event=branch
@@ -32,9 +36,13 @@ jobs:
       with:
         username: ${{ secrets.USER }}
         password: ${{ secrets.TOKEN }}
+        registry: ${{ env.REPOSITORIO }}
              
     # Realiza construção da imagem e Push para Docker Hub       
-    - uses: actions/checkout@v3
-    - name: Build the Docker image      
-      run: |
-        docker build . --file Dockerfile --tag felipejm91/calculadora-flask-python:${{ steps.meta.outputs.tags }} && docker push felipejm91/calculadora-flask-python:${{ steps.meta.outputs.tags }}
+    - name: Build and Push the Docker image      
+      uses: docker/build-push-action@v3.2.0
+      with:
+        context: .
+        push: true
+        tags: ${{ steps.meta.outputs.tags }}
+        labels: ${{ steps.meta.outputs.labels }}

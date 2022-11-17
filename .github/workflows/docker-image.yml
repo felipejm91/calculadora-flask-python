@@ -36,4 +36,6 @@ jobs:
       with:
         context: .
         push: true
-        tags: ${{ steps.meta.outputs.tags }}        
+        tags: |
+          ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}:latest
+          ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}:${{ steps.meta.output.tags }}

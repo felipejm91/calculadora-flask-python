@@ -20,7 +20,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v4
       with:
-        images: ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}
+        images: ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}        
     
     # Realiza Login no repositório Docker
     - name: Docker Login
@@ -37,5 +37,7 @@ jobs:
         context: .
         push: true
         tags: |
-          ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}:latest
-          ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}:${{ steps.meta.output.tags }}
+          ${{ steps.meta.output.labels }}:latest
+          ${{ steps.meta.output.labels }}:${{ steps.meta.output.tags }}
+          #${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}:latest
+          #${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}:${{ steps.meta.output.tags }}

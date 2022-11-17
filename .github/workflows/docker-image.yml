@@ -39,7 +39,6 @@ jobs:
     - uses: actions/checkout@v3.1.0
     - name: Build and Push the Docker image      
       run: |
-        docker build . --file Dockerfile --tag ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}:${{ steps.meta.outputs.tags }} && docker push ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}:${{ steps.meta.outputs.tags }}
-#        docker build . --file Dockerfile --tag ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}:latest && docker push ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}:latest
+        docker build . --file Dockerfile --tag ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}:latest && docker push ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}:latest
+#        docker build . --file Dockerfile --tag ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}:${{ steps.meta.outputs.tags }} && docker push ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}:${{ steps.meta.outputs.tags }}        
         
-

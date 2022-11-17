@@ -21,14 +21,6 @@ jobs:
       uses: docker/metadata-action@v4
       with:
         images: ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}
-        tags: |
-          type=schedule
-          type=ref,event=branch
-          type=ref,event=pr
-          type=semver,pattern={{version}}
-          type=semver,pattern={{major}}.{{minor}}
-          type=semver,pattern={{major}}
-          type=sha
     
     # Realiza Login no repositório Docker
     - name: Docker Login
@@ -36,7 +28,7 @@ jobs:
       with:
         username: ${{ secrets.USER }}
         password: ${{ secrets.TOKEN }}
-        registry: ${{ env.REPOSITORIO }}
+        #registry: ${{ env.REPOSITORIO }}
              
     # Realiza construção da imagem e Push para Docker Hub       
     - name: Build and Push the Docker image      

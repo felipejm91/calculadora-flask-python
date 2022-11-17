@@ -23,7 +23,9 @@ jobs:
       id: meta
       uses: docker/metadata-action@v4
       with:
-        images: ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}        
+        images: ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}    
+        tags: |
+          type=semver, pattern={{version}},value=v1.0.0
     
     # Realiza Login no repositório Docker
     - name: Docker Login

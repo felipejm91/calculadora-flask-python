@@ -34,7 +34,7 @@ jobs:
     - name: Build and Push the Docker image  
     #- uses: actions/checkout@v3.1.0
       run: |
-        docker build ./ --tag ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}:latest && docker push ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}:latest
+        docker build -t ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}:latest . && docker push ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}:latest
 #        docker build . --file Dockerfile --tag ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}:${{ steps.meta.output.tags }} && docker push ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}:${{ steps.meta.output.tags }}      
       #uses: docker/build-push-action@v3.2.0
       #with:

@@ -29,7 +29,7 @@ jobs:
       with:
         images: ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}
         tags: |
-          type=match,pattern=\d.\d.\d
+          type=match,pattern=v(.*),group=1,value=v1.0.0
     
     # Realiza Login no repositório Docker
     - name: Docker Login

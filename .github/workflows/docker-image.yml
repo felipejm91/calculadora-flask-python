@@ -29,7 +29,8 @@ jobs:
       with:
         images: ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}
         tags: |
-          type=sha
+          type=ref,event=tag
+#          type=sha
     
     # Realiza Login no repositório Docker
     - name: Docker Login

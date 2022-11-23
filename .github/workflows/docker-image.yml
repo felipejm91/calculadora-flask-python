@@ -1,4 +1,4 @@
-name: CI Container Docker
+name: Build and Push Docker Image and Deploy GKE
 
 on:
   push:
@@ -29,7 +29,8 @@ jobs:
       with:
         images: ${{ env.REPOSITORIO }}/${{ env.IMAGEM_NOME }}
         tags: |
-            type=semver,pattern={{version}},value=v1.0.0
+          type=match,pattern=v(.*),group=1,value=v1.0.0
+#            type=semver,pattern={{version}},value=v1.0.0
     
     # Realiza Login no repositório Docker
     - name: Docker Login

@@ -1,6 +1,5 @@
 # calculadora-flask-python
 
-**EM DESENVOLVIMENTO** - **SUGESTÕES E DICAS SÃO BEM-VINDAS**
 
   Calculadora para operações aritméticas básicas; desenvolvida com HTML, CSS, Flask, Python E Docker. Esse projeto tem como finalidade, implantar todos os conhecimentos básicos adquiridos durante os estudos das ferramentas citadas. 
 
@@ -8,7 +7,7 @@
   
   Aplicação foi configurada em um cluster kubernetes no ambiente do Google Cloud(GKE) e configurado o acesso através dop domínio "calc.felipemeneguetti.com.br" e implantado segurança de SSL/TLS. 
   
-  Próximo objetivo é implantar a automação do deploy para o cluster através de um pipeline CD.
+ 
 
 ----------------------------------
 

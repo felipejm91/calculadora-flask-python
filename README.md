@@ -1,4 +1,4 @@
-# calculadora-flask-pytho
+# calculadora-flask-python
 
 
   Calculadora para operações aritméticas básicas; desenvolvida com HTML, CSS, Flask, Python E Docker. Esse projeto tem como finalidade, implantar todos os conhecimentos básicos adquiridos durante os estudos das ferramentas citadas. 
